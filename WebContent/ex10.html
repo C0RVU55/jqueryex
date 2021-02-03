@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>함수</h1>
+	
+	<script type="text/javascript">
+		//기명 익명 함수 같이 쓰기
+		
+		//(2)위부터 순서대로 해석
+		var test = function(){
+			console.log("testA함수");
+		}
+		
+		//(1)선언적 함수가 제일 먼저 해석돼서 내부에 따로 정리됨
+		function test(){
+			console.log("testB함수");
+		}
+		
+		//(3)test변수로 (2)의 함수 실행
+		test();
+		
+	</script>
+
+
+</body>
+</html>
