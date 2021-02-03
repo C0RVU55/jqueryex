@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>자바스크립트 변수</h1>
+	
+	<script type="text/javascript">
+		/* 변수 선언법 : 자료형 안 씀 */
+		
+		//&& || ! 연산자도 자바랑 같아서 넘어감 
+		
+		//변수명 규칙 : 예약어 불가, _ 또는 영어로만 시작 가능, 특수문자는 _와 $만 가능 하고 공백 불가, 변수명 중복 가능
+		console.log("변수 선언");
+		var num;
+		var no = 3;
+		var str = "안녕하세요";
+		var result = 3>5;
+		
+		console.log(no);
+		console.log(str);
+		console.log(result);
+	
+		num = 1111;
+		console.log(num);
+		
+	</script>
+	
+	<script type="text/javascript">
+		/* 변수명 중복 */
+		
+		//같은 변수명 있으면 가장 나중에 대입한 값이 출력됨
+		var person = "이다현";
+		person = "다현이"; 
+		console.log(person);
+		console.log("-------");
+		
+		var person01 = "이다현";
+		var person01 = "현다이";
+		console.log(person01);
+		console.log("-------");
+	</script>
+	
+	<script type="text/javascript">
+		/* 자료형은 데이터 대입시 결정되기 때문에 변수 선언할 때 표기 안 함 */
+		
+		var data;
+		console.log(typeof data); //undefined (변수는 있지만 자료형이 안 정해졌다는 자료형)
+		
+		data = 15;
+		console.log(typeof data); //number
+		
+		data = "안녕";
+		console.log(typeof data); //string --> 자료형이 한번 정해지면 끝인 자바와 다르게 계속 바뀔 수 있음
+	
+		data = true;
+		console.log(typeof data); //boolean --> 제일 마지막 데이터의 자료형을 따라감
+		
+		console.log("-------");
+
+	</script>
+	
+	<script type="text/javascript">
+		/* null undefined 비교*/
+		
+		/* 
+		자바 : PersonVo personVo; --> null
+		자바스크립트 : var num; --> undefined (null 되려면 null 대입해야 됨)
+		*/
+		
+		var myVar1;
+		var myVar2 = null;
+		console.log(myVar1); //undefined
+		console.log(myVar2); //null
+		
+		console.log("-------");
+	</script>
+	
+	<script type="text/javascript">
+		/* == === 비교 (일치 연산자) */
+		console.log("111" == 111); //true
+		console.log("111" === 111); //false (자료형까지 엄격하게 비교)
+		
+		console.log(myVar1 == myVar2); //아무것도 없는 거랑 null을 비교하는 거긴 하지만 어쨌든 둘 다 값이 없으니까 true
+		console.log(myVar1 === myVar2); //엄격하게 보면 false
+		
+		console.log("-------");
+		
+		console.log('' == false); //true
+		console.log('' === false); //false
+		
+		console.log('' == 0); //true
+		console.log('' === 0); //false
+		
+		console.log("-------");
+		console.log('' == false); //true --> 널널하게 보자면 공백은 false기도 하고 0이기도 함.
+		console.log('' == 0); //true
+		console.log(0 == false); //true
+	</script>
+	
+	
+</body>
+</html>
