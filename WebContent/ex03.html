@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>if문 예제</h1>
+	
+	<script type="text/javascript">
+		var num = prompt(); //팝업창 띄워서 값 받는 건데 잘 안 씀.
+		//console.log(num);
+		
+		//자바스크립트의 if는 자바는 아니지만 거의 똑같음
+		//이거는 jqueryex에서 실행되는 게 아니라 response된 후에 브라우저에서 <script> 내용을 실행하는 거. 
+		//el jstl이 해석돼서 문자열 상태로 브라우저로 가는 거랑 다름.
+		
+		if(num >= 60){
+			//합격
+			//console.log("합격");
+			document.write("합격");
+		} else {
+			//불합격
+			//console.log("불합격");
+			document.write("불합격");
+		}
+		
+	</script>
+</body>
+</html>
