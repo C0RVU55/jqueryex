@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>변수의 범위</h1>
+	
+	<script type="text/javascript">
+		/* 케이스1
+		var name = "global"; //전역변수 선언
+		
+		//함수정의 : 바로 실행되지 않고 브라우저 내부에 정리됨
+		function checkscope(){
+			var name = "local";
+			console.log(name);
+		}
+		
+		checkscope(); //name --> local(지역변수 --> 함수 안에서만 쓰임)
+		console.log(name); //name --> global(전역변수)
+		*/
+		
+		var name = "global";
+		
+		//함수정의 : 함수 내 var을 안 쓰고 변수 선언 --> var 쓰면 변수가 새로 선언되지만 안 쓰면 기존 변수를 찾아 덮어씀.
+		function checkscope(){
+			name="local";
+			name2="로컬"; //기존 변수가 아닌데 var를 안 쓰면 전역변수로 인식됨. 함수 밖에서 var로 선언한 거랑 같음.
+		}
+		
+		checkscope();
+		console.log(name); //name --> local
+		console.log(name2); //name2 --> 로컬
+	</script>
+	
+</body>
+</html>
