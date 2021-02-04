@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>객체</h1>
+	
+	<script type="text/javascript">
+	
+	//GuestVo gVo = new GuestVo(); 자바에서 이렇게 쓰던 걸 자바스크립트에선 아래처럼 씀.
+	
+	//키:값으로 씀 / 안에서 함수정의도 가능
+	var gVo = {
+		name:"이다현", 
+		password:"1234",
+		content:"ㄴㄴㄴ",
+		showInfo:function(){
+			console.log(this.name + ", "+this.password+", "+this.content);
+		}
+	}
+	
+	//변수에 넣을 수도 있음
+	var name = gVo.name;
+	console.log(name);
+	
+	console.log(gVo.name);
+	console.log(gVo.password);
+	console.log(gVo.content);
+	gVo.showInfo(); //안에 console이 있으니까 또 출력할 필요 없이 바로 함수실행
+	
+	console.log("--------------");
+	
+	
+	//person관리 배열
+	var personList=[];
+	
+	
+	//출력하기
+	var person1={
+		name: "이다현",
+		hp:"01-111-1111"
+			
+	};
+	console.log(person1); //함수 자체가 출력됨
+	
+	//값이 안 정해진 경우 미리 객체 선언한 후에 데이터 넣을 수도 있음
+	var person2={};
+	person2.name="현다이";
+	person2.hp="12-222-2222";
+	console.log(person2);
+	
+	//특정 필드값만 정해진 경우
+	var person3={
+		name:"으어"
+	};
+	person3.hp="33-3333-333"; //추후 데이터 삽입 가능
+	console.log(person3);
+	
+	//배열에 넣기
+	personList.push(person1);
+	personList.push(person2);
+	personList.push(person3);
+	
+	//출력(배열을 다 표현할 수 없어서 {...} 이렇게 표기됨)
+	console.log(personList);
+	
+	console.log("-------------");
+	
+	//전체이름만 출력
+	for(var i=0; i<personList.length; i++){
+		console.log(personList[i].name);
+	}
+	
+	
+	</script>
+</body>
+</html>
