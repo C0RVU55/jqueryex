@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>이벤트</h1>
+	<!-- ~할때 *작동해라 -->
+	
+	<h2>h2태그_1</h2>
+	<h2>h2태그_2</h2>
+	<h2>h2태그_3</h2>
+	
+	<h3 class="tagh3">네이버</h3> 
+	<h3 class="tagh3">h3태그_2</h3>
+	
+	<div>
+		<button id="btn">자바스크립트 테스트 버튼</button>
+	</div>
+	
+	<!-- 버튼 클릭하면 <p> 안에 텍스트 들어가게 하기 -->
+	<p id="display">
+	
+	</p>
+	
+	<p id="display2">
+	
+	</p>
+	
+	<script type="text/javascript">
+	//자바스크립트로 이벤트 잡기 --> 값 찾는 방식 : 아이디 태그 클래스
+	
+	//onload은 윈도우(브라우저 내용)가 다 그려졌을 때(문서가 로딩됐을 때) 실행됨 --> 함수명 따로 지어서 따로 실행시킬 필요없음
+	window.onload=function(){
+		var testButton = document.getElementById("btn");
+		var textArea=document.getElementById("display"); //id로 내용 찾기
+		var textArea2=document.getElementById("display2"); //class로 내용 찾기
+		
+		console.log(testButton); //확인용
+		console.log(textArea);
+
+		//tag h2 클릭 세팅 --> 태그명 지정
+		//태그에 id를 부여할 수도 있지만 태그 자체를 갖다 쓸 수도 있음
+		//<h2>가 3개 있기 때문에 배열로 정리됨 --> 하나만 있어도 배열로 정리됨
+		var tagArray = document.getElementsByTagName("h2");
+		console.log(tagArray);
+		
+		//class h3 클릭 세팅 (display2에 만들기) --> 클래스명 지정 
+		var tagh3Array = document.getElementsByClassName("tagh3");
+		console.log(tagh3Array);
+		
+		
+		//////////////////////////////////////////////////
+		
+		
+		//버튼 클릭 발생
+		//기능 정의해놓은 상태고 클릭되면 작동함.
+		testButton.onclick = function(){ //onclick도 정해진 함수. 
+			console.log("버튼클릭");
+			textArea.innerHTML="<font color='#ff0000'>버튼 클릭</font>"; //이 안에 쓴 텍스트가 위의 <p>안에 추가됨.
+		};
+		
+		//태그 클릭 --> 배열 전체를 클릭할 수는 없기 때문에 배열 번호로 정의해야 클릭 가능
+		//h2태그_1 클릭
+		tagArray[0].onclick = function(){
+			console.log("h2태그_1");
+			textArea.innerHTML="<font color='#00ff00'>h2태그_1</font>";
+		};
+		
+		tagArray[1].onclick = function(){
+			console.log("h2태그_2");
+			textArea.innerHTML="<font color='#ff0000'>h2태그_2</font>";
+		};
+		
+		tagArray[2].onclick = function(){
+			console.log("h2태그_3");
+			textArea.innerHTML="<font color='#0000ff'>h2태그_3</font>";
+		};
+		
+		//클래스 클릭 --> 마찬가지로 배열 번호 정의해야 클릭 가능
+		//클릭해서 출력된 텍스트에 링크걸기 등 응용 가능
+		tagh3Array[0].onclick=function(){
+			console.log("네이버");
+			textArea2.innerHTML="<a href='http://www.naver.com' target='_blank'>네이버</a>"; //응용 링크 걸기
+		};
+		
+		tagh3Array[1].onclick=function(){
+			console.log("h3태그_2");
+			textArea2.innerHTML="<font color='#0000ff'>h3태그_2</font>";
+		};
+	};
+	
+	</script>
+	
+</body>
+</html>
