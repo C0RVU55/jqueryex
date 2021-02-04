@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1>배열</h1>
+	
+	<script type="text/javascript">
+		console.log("-----배열-----")	
+		/*
+		var array = []; //빈 배열. push로 데이터 추가함.
+		var array01 = [273, 32, 103, 57, 52];
+		
+		console.log(array01[0]);
+		console.log(array01[1]);
+		console.log(array01[2]);
+		console.log(array01[3]);
+		console.log(array01[4]);
+
+		console.log("------------");
+		
+		//push : 배열 맨 끝에 데이터 추가
+		array01.push(100);
+		
+		for(var i=0; i<array01.length; i++){
+			console.log(array01[i]);
+		}
+		
+		console.log("------------");
+		
+		//pop : 배열 맨 끝 데이터 제거
+		array01.pop();
+		
+		for(var i=0; i<array01.length; i++){
+			console.log(array01[i]);
+		}
+		
+		console.log("------------");
+		
+		var array02 = [];
+		
+		//빈 배열 만들고 거기에 데이터 넣기
+		array02[0] = 1;
+		array02[1] = 2.5;
+		array02[2] = "안녕";
+		array02[3] = "qwe";
+		
+		for(var i=0; i<array02.length; i++){
+			console.log(array02[i]);
+		}
+		*/
+		
+		
+		//기명함수라 어디에 써도 상관없음
+		function sum(a, b){
+			return a+b;
+		}
+		
+		//익명함수 실행 순서 주의 (먼저 정의돼야 함)
+		var sum2 = function(){
+			return 3+4;
+		}
+		
+		//배열 안에 함수선언(복잡한 건 이렇게 잘 안 하지만), 배열 추가 가능
+		var array03 = [273, 1.5, "안녕", 3>2, sum, sum2, function(){return "익명함수"}, [23,244,1.1]];
+		
+		console.log(array03[0]);
+		console.log(array03[1]);
+		console.log(array03[2]);
+		console.log(array03[3]);
+		console.log(array03[4](100, 100)); //매개 변수 넣는 법
+		console.log(array03[5]()); //()는 실행한다는 뜻이라 안 쓰면 함수가 그대로 출력됨
+		console.log(array03[6]());
+		console.log(array03[7][2]); //배열 내 데이터 위치를 정해서 하나씩 꺼내기 가능
+		
+	</script>
+	 
+</body>
+</html>
