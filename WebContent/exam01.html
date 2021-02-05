@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div>
+		<button id="btn">자바스크립트 테스트</button>
+	</div>
+	
+	<p id="display">
+
+	</p>
+	
+
+</body>
+
+	<script type="text/javascript">
+	
+	/* 자바스크립트 표현
+		window.onload=function(){
+			var testButton = document.getElementById("btn");
+			var textArea = document.getElementById("display");
+			console.log(testButton);
+			console.log(textArea);
+			
+			testButton.onclick = function(){
+				console.log("버튼클릭");
+				textArea.innerHTML="<font color='#ff0000'>이다현</font>";
+			};
+			
+		};
+	*/
+	
+	//제이쿼리 표현
+	//id 표기 : #이름
+	$("#btn").on("click", function(){ //onload 이벤트 잡기
+		$("#display").html("<font color='#ff0000'>이다현</font>"); //innerHTML 출력
+	});
+	
+	</script>
+
+</html>

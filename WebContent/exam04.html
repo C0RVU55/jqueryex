@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+	<ul>
+		<li class="red"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="blue"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="red"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="blue"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="green"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+	</ul>
+
+</body>
+	
+<script type="text/javascript">
+	//클래스 선택은 .
+	
+	/*
+	$(".red").css("color", "red");
+	$(".blue").css("color", "blue");
+	*/
+	
+	//한 개의 선택자에서 여러 태그 찾을 때 --> 같은 따옴표 안에서 쉼표로 구분
+	$(".red, .blue").css("color", "blue");
+	
+	//$(".red, #first, li").css("color", "blue"); 이런 식으로 섞어쓰기 가능
+
+</script>
+
+</html>
