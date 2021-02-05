@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<button id="btn" type="button">js테스트버튼</button>
+		<h1 id="display">이름출력영역</h1>
+	</div>
+
+</body>
+
+<script type="text/javascript">
+	//이벤트 넣기
+	
+	/*
+	var test = $("#btn");
+	console.log(test);
+	*/
+	
+	//이벤트 없어서 로딩과 동시에 발생
+	$("#display").text("이다현");	
+	
+	//클릭 이벤트 후에 발생
+	$("#btn").on("click", function(){
+		console.log("버튼 클릭");
+		
+		$("#display").text("이다현111");
+		$("#display").css("color", "red");
+		$("#display").prepend("test");
+		$("#display").append("333");
+	});
+	
+	
+	
+	
+	
+</script>
+
+</html>
