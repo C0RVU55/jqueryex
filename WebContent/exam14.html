@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		
+	</ul>
+
+</body>
+
+<script type="text/javascript">
+	//객체 조작 this ***중요***
+
+	/* 원래는 이렇게 했겠지만
+	$("#first").on("click", function(){
+		console.log("id=first");
+	});
+	*/
+	
+	/* 이렇게 하면 모든 li에 클릭 이벤트가 잡힘
+	var tag = $("li");
+	console.log(tag);
+	*/
+	
+	/*
+	$("li").on("click", function(){
+		console.log("li 클릭");
+		
+		var tag = $(this); //방금 클릭한 걸(방금 발생한 이벤트) 출력함
+		console.log(tag);
+	});
+	*/
+	
+	$("li").on("click", function(){ //클릭 범위 지정 : <li>
+		console.log("li 클릭");		
+		
+		console.log($(this)); //방금 발생한 이벤트
+		
+		var str = $(this).text(); //방금 발생한 이벤트의 텍스트
+		console.log(str);
+		
+		var value = $(this).attr("class"); //방금 발생한 이벤트의 "클래스, 아이디 등"명
+		console.log(value);
+	});
+	
+	//텍스트 클릭하면 내 이름으로 바뀌게 하기
+	$("li").on("click", function(){
+		$(this).text("이다현");
+	});
+	
+</script>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		
+	</ul>
+	<button id="btn" type="button">li요소추가</button>
+</body>
+
+<script type="text/javascript">
+
+	//버튼 클릭 --> li 요소 추가
+	$("#btn").on("click", function(){
+		console.log("버튼클릭");
+		//$("ul").html("<li>다섯번째</li>"); <ul>안에 있는 걸 다 갈아치워서 추가한 것만 남음
+		
+		$("ul").append("<li>다섯번째</li>");
+		$("ul").append("<li>여섯번째</li>");
+		$("ul").append("<li>일곱번째</li>");
+	});
+	
+	/*
+	//텍스트 클릭 --> 텍스트 콘솔 출력 
+	$("li").on("click", function(){ 
+		console.log("li클릭");
+		var str = $(this).text();
+		console.log(str);
+	});
+	*/
+	
+	//*****위임*****
+	//근데 버튼클릭으로 추가된 텍스트는 클릭 이벤트가 안 잡힘 
+	//--> ul에 이벤트를 줌 --> li로 못 나누고 전체인 ul로 인식함 --> 중간에 li 추가
+	//--> ul은 이벤트 잡고 추가될 li에 기능을 위임함 --> 버튼클릭으로 추가된 li도 이벤트 잡을 수 있게 됨
+	$("ul").on("click", "li", function(){ 
+		//console.log("ul클릭");
+		//console.log($(this));
+		
+		/* 내용 출력 다 작동
+		var str = $(this).text();
+		console.log(str);
+		*/
+		
+		$(this).text("이다현"); //클릭시 텍스트 바꾸기도 작동
+	});
+	
+
+</script>
+
+
+</html>
