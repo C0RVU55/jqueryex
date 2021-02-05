@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<style>
+	.red {color: red;}
+	
+	.blue {color: blue;}
+
+</style>
+
+
+<title>Insert title here</title>
+</head>
+
+<body>
+
+	<ul>
+		<li id="first" class="red blue del">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		<li>다섯번째 아이템입니다.</li>
+	</ul>
+
+</body>
+	
+	<script type="text/javascript">
+		//css 바꿔치기 하기
+		
+		//$("#first").css("color", "blue"); 이럴 수도 있지만 addClass, removeClass를 씀
+		
+		//기존 클래스에 blue도 추가돼서 class = red blue 이렇게 돼 있음
+		//$("#first").addClass("blue");
+		
+		//class 이름 지움
+		//$("#first").removeClass("red");
+		
+		//클래스에 red blue del 추가 후 적용
+		$("#first").removeClass("blue");
+		
+	</script>
+
+</html>
