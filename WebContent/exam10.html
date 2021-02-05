@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+
+	<ul>
+		<li class="del">첫번째 아이템입니다.</li>
+		<li class="del"><strong>두번째 아이템입니다.</strong></li>
+		<li class="del">세번째<br> 아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		<li>다섯번째 아이템입니다.</li>
+	</ul>
+
+</body>
+
+<script type="text/javascript">
+	//객체조작 : 비우기
+	
+	//내용만 없어지고 태그는 남음
+	//$(".del").empty();
+	
+	//공백을 넣어서 위와 같은 효과를 냄
+	$(".del").text("");
+	
+</script>
+	
+
+</html>

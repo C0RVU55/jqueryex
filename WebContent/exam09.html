@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+
+	<ul>
+		<li>첫번째 아이템입니다.</li>
+		<li>두번째 아이템입니다.</li>
+		<li class="del">삭제할  아이템입니다.</li>
+		<li>네번째 아이템입니다.</li>
+		<li class="del">삭제할  아이템입니다.</li>
+		<li>다섯 번째 아이템입니다.</li>
+	</ul>
+
+</body>
+	
+	<script type="text/javascript">
+		//객체 제어 : 삭제
+		
+		//텍스트만 없애는 게 아니라 li태그 자체를 없애버림
+		$(".del").remove();
+		
+		//$가 오류나면 head에 있는 제이쿼리 경로가 틀린 거
+	</script>
+
+</html>
