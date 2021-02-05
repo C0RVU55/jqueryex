@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<style>
+	.red {color: red;}
+	
+	.blue {color: blue;}
+
+</style>
+
+
+<title>Insert title here</title>
+</head>
+
+<body>
+
+	이름:<input type="text" name="name" /><br>
+	비밀번호:<input type="password" name="password" /><br>
+	<textarea name="content"></textarea>
+	<br><br>
+	이름2:<input type="text" name="name2" value="홍길동"/><br>
+	비밀번호2:<input type="password" name="password2" value="1234"/><br>
+	<textarea name="content2">산토끼토끼야</textarea>
+	
+</body>
+	
+	<script type="text/javascript">
+		//객체조작
+		//원래는 input에 value를 넣어야 값도 같이 로딩되지만 태그에 직접 안 넣고 자바스크립트에 직접 넣어보려고 함
+		//각 태그에 id를 정해줘도 되겠지만 한번에 여러 태그를 찾으려면 속성으로 해도 됨
+		/*
+		var tag = $("[name]");
+		console.log(tag);
+		*/
+		
+		$("[name='name']").val("이다현");
+		$("[name='password']").val("111");
+		$("[name='content']").val("내용");
+		
+		//이름2 읽어오기
+		var name2 = $("[name='name2']").val();
+		console.log(name2);
+		
+		var name2pw = $("[name='password']").val();
+		console.log(name2pw);
+		
+		var name2ct = $("[name='content']").val();
+		console.log(name2ct);
+		
+		var guestVo = {
+			name: name2,
+			password: name2pw,
+			content: name2ct				
+		};
+		
+		console.log(guestVo);
+		
+	</script>
+
+</html>
